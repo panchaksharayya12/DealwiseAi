@@ -1,119 +1,133 @@
 # DealWise AI
 
-> **"Know the deal before you buy."**  
-> AI-Powered Real Estate Deal Analyzer & Investment Intelligence Platform.
+> "Know the deal before you buy."  
+> AI-Powered Real Estate Deal Analyzer and Investment Intelligence Platform.
 
-DealWise AI helps homebuyers, real estate investors, and property enthusiasts evaluate properties before committing capital. By combining deterministic mathematical models (yields, amortization, cashflow) with an objective scoring matrix and AI-powered insights, DealWise answers the central question: **"Is this property actually a good deal?"**
-
----
-
-## 🌟 Key Features
-
-- **Deterministic Financial Engine**: Precision calculations for price per sq.ft, monthly EMI, total interest, gross/net rental yields, and cash-on-cash return.
-- **Transparent Deal Score (0–100)**: Weighted score (Financial Health 35%, Rental Yield 20%, Price Efficiency 20%, Loan Burden 15%, Risk Indicators 10%) with classifications: *Strong Deal*, *Fair Deal*, *Needs Review*, *Risky Deal*.
-- **Risk Taxonomy & Due-Diligence Checklist**: Identifies negative monthly carry, high LTV leverage, aging building risks, and provides a 8-point physical verification checklist.
-- **5-Year Growth & Income Projection**: Interactive scenario modeling powered by Recharts with adjustable annual appreciation assumptions.
-- **Ask DealWise AI Assistant**: Interactive conversational inquiries with active property context (supports OpenAI GPT-4o-mini with deterministic local fallback).
-- **Side-by-Side Property Comparison**: Benchmark multiple properties head-to-head with automated category winners.
-- **Deal Report PDF Generation**: One-click download of executive-grade investment diligence reports.
-- **Saved Analyses ("My Analyses")**: Persistent deal archiving with optional Supabase database sync and automatic localStorage fallback.
-- **Cinematic VEX-Inspired Design**: Raw background hero video, liquid glass styling (`.liquid-glass`), character-by-character animations, and zero distracting gradients.
+DealWise AI helps homebuyers, real estate investors, and property syndicates evaluate residential and commercial properties prior to committing capital. By pairing deterministic actuarial and financial models (yields, debt amortization, carrying cashflow) with an objective weighted scoring matrix and contextual AI insights, DealWise answers the central question: "Is this property actually a good deal?"
 
 ---
 
-## 🏗️ Project Structure
+## Direct Links and Deliverables
+
+- Live Web Application: http://localhost:5173
+- Backend Health Endpoint: http://localhost:5000/api/health
+- GitHub Repository: https://github.com/panchaksharayya12/DealwiseAi
+- Project Report (Word Document): [DEALWISE_AI_PROJECT_REPORT.docx](DEALWISE_AI_PROJECT_REPORT.docx)
+- Presentation Deck (PowerPoint PPT): [DEALWISE_AI_PRESENTATION.pptx](DEALWISE_AI_PRESENTATION.pptx)
+- Technical Report (Markdown): [PROJECT_REPORT.md](PROJECT_REPORT.md)
+- Interactive Presentation (HTML): [presentation.html](presentation.html)
+
+---
+
+## Key Capabilities
+
+- Deterministic Financial Modeling: Precise calculations for price per sq.ft, monthly EMI, total interest, gross and net rental yields, and cash-on-cash return. Zero numerical hallucination.
+- Transparent 5-Pillar Deal Score (0 to 100): Weighted diagnostic scoring (Financial Health 35%, Rental Yield 20%, Price Efficiency 20%, Loan Burden 15%, Risk Indicators 10%) with classifications: Strong Deal, Fair Deal, Needs Review, Risky Deal.
+- Risk Taxonomy and Due-Diligence Checklist: Identifies negative monthly carry, high LTV leverage, aging building liabilities, and provides an 8-point physical verification checklist.
+- 5-Year Growth and Income Projection: Interactive scenario modeling powered by Recharts with an adjustable annual appreciation slider.
+- Ask DealWise AI Assistant: Conversational inquiries with active property context, powered by OpenAI GPT-4o-mini with automatic local deterministic fallback.
+- Multi-Property Benchmarking: Side-by-side deal comparison highlighting category winners and automated deal recommendations.
+- Executive Due-Diligence PDF Reports: Client-side vector PDF generation via jsPDF for offline diligence.
+- Saved Analyses: Dual-layer persistence supporting Supabase cloud database synchronization and offline browser localStorage fallback.
+- Liquid Glass Design System: Minimalist VEX-inspired aesthetic using pure black (#000000), white, zinc gray, and specular border reflections.
+
+---
+
+## Project Structure
 
 ```
 dealwise-ai/
-│
-├── src/
-│   ├── components/            # Reusable UI widgets
-│   │   ├── AnimatedCounter.tsx   # Smooth numeric counter
-│   │   ├── AnimatedHeading.tsx   # Char-by-char hero animation
-│   │   ├── AnalysisDashboard.tsx # Comprehensive metrics dashboard
-│   │   ├── AskDealWise.tsx       # Interactive property AI assistant
-│   │   ├── FadeIn.tsx            # Configurable fade-in component
-│   │   ├── Footer.tsx            # Global footer with working anchors
-│   │   ├── Navbar.tsx            # Liquid glass floating navbar
-│   │   ├── ProjectionChart.tsx   # Recharts 5-year scenario model
-│   │   └── Reveal.tsx            # IntersectionObserver scroll entrance
-│   ├── sections/              # Landing page sections
-│   │   ├── AboutSection.tsx
-│   │   ├── AnalyzeSection.tsx
-│   │   ├── CompareSection.tsx
-│   │   ├── FaqSection.tsx
-│   │   ├── FeaturesSection.tsx
-│   │   ├── FinalCtaSection.tsx
-│   │   ├── HeroSection.tsx
-│   │   ├── HowItWorksSection.tsx
-│   │   ├── SavedAnalysesSection.tsx
-│   │   └── ValueSection.tsx
-│   ├── types/                 # Shared TypeScript interfaces
-│   ├── utils/                 # Deterministic calculations, sample data, PDF, storage
-│   ├── App.tsx                # Main application component
-│   ├── main.tsx               # Client React DOM entry
-│   └── index.css              # Global styles & .liquid-glass definition
-│
-├── server/
-│   ├── routes/                # Express REST endpoints
-│   │   ├── ai.ts              # POST /api/ai/chat
-│   │   ├── analyses.ts        # GET, POST, DELETE /api/analyses
-│   │   ├── analyze.ts         # POST /api/analyze
-│   │   ├── compare.ts         # POST /api/compare
-│   │   ├── health.ts          # GET /api/health
-│   │   └── report.ts          # POST /api/report
-│   ├── services/              # Calculations, OpenAI, Supabase clients
-│   ├── types.ts               # Server data contracts
-│   └── index.ts               # Express server entry point (Port 5000)
-│
-├── .env.example               # Environment variables template
-├── index.html                 # HTML shell with Inter Google Font
-├── package.json               # Dependencies and run scripts
-├── tailwind.config.js         # Tailwind color and typography theme
-├── tsconfig.json              # TypeScript compilation setup
-└── vite.config.ts             # Vite bundler with /api proxy
+|
+|-- DEALWISE_AI_PROJECT_REPORT.docx # Official Project Report (Word Document)
+|-- DEALWISE_AI_PRESENTATION.pptx   # Official Presentation Deck (PowerPoint PPT)
+|-- PROJECT_REPORT.md              # Technical and Product Report (Markdown)
+|-- PRESENTATION_DECK.md           # Slide Deck Documentation (Markdown)
+|-- presentation.html              # Standalone Interactive Presentation App
+|
+|-- src/
+|   |-- components/                # Reusable UI components
+|   |   |-- AnimatedCounter.tsx
+|   |   |-- AnimatedHeading.tsx
+|   |   |-- AnalysisDashboard.tsx
+|   |   |-- AskDealWise.tsx
+|   |   |-- FadeIn.tsx
+|   |   |-- Footer.tsx
+|   |   |-- Navbar.tsx
+|   |   |-- ProjectionChart.tsx
+|   |   `-- Reveal.tsx
+|   |-- sections/                  # Landing page sections
+|   |   |-- AboutSection.tsx
+|   |   |-- AnalyzeSection.tsx
+|   |   |-- CompareSection.tsx
+|   |   |-- FaqSection.tsx
+|   |   |-- FeaturesSection.tsx
+|   |   |-- FinalCtaSection.tsx
+|   |   |-- Hero.tsx
+|   |   |-- HowItWorksSection.tsx
+|   |   |-- SavedAnalysesSection.tsx
+|   |   `-- ValueSection.tsx
+|   |-- types/                     # Shared TypeScript data contracts
+|   |-- utils/                     # Deterministic calculations, sample data, PDF, storage
+|   |-- App.tsx                    # Main application root
+|   |-- main.tsx                   # Client entry point
+|   `-- index.css                  # Global styling and .liquid-glass class
+|
+|-- server/
+|   |-- routes/                    # Express REST endpoints
+|   |   |-- ai.ts                  # POST /api/ai/chat
+|   |   |-- analyses.ts            # GET, POST, DELETE /api/analyses
+|   |   |-- analyze.ts             # POST /api/analyze
+|   |   |-- compare.ts             # POST /api/compare
+|   |   |-- health.ts              # GET /api/health
+|   |   `-- report.ts              # POST /api/report
+|   |-- services/                  # Calculations, OpenAI client, Supabase client
+|   |-- types.ts                   # Backend type interfaces
+|   `-- index.ts                   # Express server entry (Port 5000)
+|
+|-- .env.example                   # Environment configuration template
+|-- index.html                     # HTML shell with Google Font Inter
+|-- package.json                   # Dependencies and npm scripts
+|-- tailwind.config.js             # Tailwind CSS theme configuration
+|-- tsconfig.json                  # TypeScript compiler settings
+`-- vite.config.ts                 # Vite bundler with universal host and API proxy
 ```
 
 ---
 
-## 🚀 Getting Started
+## Installation and Execution
 
-### 1. Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) (installed with Node)
+### Prerequisites
+- Node.js (version 18 or higher recommended)
+- npm (installed with Node.js)
+- Python 3.10+ (optional, only required if regenerating .docx or .pptx files)
 
-### 2. Installation
-Open your terminal in the `dealwise-ai` folder and run:
+### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-### 3. Running the Application Locally
-Run the combined development server with:
+### 2. Run the Development Server
 ```bash
 npm run dev
 ```
 
-This single command starts:
-- **Express Backend**: Running on `http://localhost:5000`
-- **Vite Frontend**: Running on `http://localhost:5173` (with `/api` proxy automatically routing requests to backend)
+This single command launches both processes concurrently:
+- Express Backend API: http://localhost:5000 and http://127.0.0.1:5000
+- Vite Frontend: http://localhost:5173 and http://127.0.0.1:5173
 
 Open your browser at:
-```
 http://localhost:5173
-```
 
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
-Create a file named `.env` in the root folder (or copy from `.env.example`):
-
+Copy the template file to configure local variables:
 ```bash
 cp .env.example .env
 ```
 
-Default configuration in `.env`:
+Configuration fields:
 ```env
 PORT=5000
 OPENAI_API_KEY=
@@ -121,103 +135,63 @@ SUPABASE_URL=
 SUPABASE_ANON_KEY=
 ```
 
-> **Note**: Both `OPENAI_API_KEY` and `SUPABASE_*` credentials are completely **optional**.
-> - If `OPENAI_API_KEY` is not provided, DealWise AI automatically runs in **Deterministic Analysis Mode**, using built-in financial intelligence without crashing.
-> - If `SUPABASE_*` is not configured, analyses are saved locally in the browser's **localStorage** automatically.
+Both OpenAI and Supabase credentials are completely optional:
+- If OPENAI_API_KEY is not provided, DealWise AI automatically operates in Deterministic Analysis Mode, generating qualitative insights and answering property questions using built-in financial logic.
+- If SUPABASE credentials are not configured, analyses are automatically persisted locally in the browser via localStorage.
 
 ---
 
-## 🗄️ Supabase Configuration (Optional)
+## Financial Modeling Methodology
 
-If you wish to store property evaluations in Supabase:
-1. Create a project at [supabase.com](https://supabase.com).
-2. Go to the **SQL Editor** in your Supabase dashboard and run this SQL script:
+All quantitative metrics are calculated deterministically:
 
-```sql
-create table if not exists public.property_analyses (
-  id text primary key,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
-  property_name text not null,
-  location text not null,
-  property_data jsonb not null,
-  financial_metrics jsonb not null,
-  deal_score jsonb not null,
-  ai_analysis jsonb not null
-);
+1. Price per sq.ft:
+   Price / sq.ft = Asking Price / Built-up Area
 
--- Optional Row Level Security
-alter table public.property_analyses enable row level security;
-create policy "Allow anonymous all access" on public.property_analyses
-  for all using (true) with check (true);
-```
+2. Gross Rental Yield:
+   Gross Yield (%) = (Monthly Rent * 12 / Asking Price) * 100
 
-3. Copy your project's URL and Anon Key into `.env`:
-```env
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_ANON_KEY=your-anon-key
-```
+3. Net Rental Yield:
+   Net Yield (%) = ((Monthly Rent - Monthly Maintenance) * 12 / Asking Price) * 100
+
+4. Monthly EMI (Standard Reducing Amortization Formula):
+   EMI = P * r * (1 + r)^n / ((1 + r)^n - 1)
+   Where P is the Loan Amount (Asking Price - Down Payment), r is the monthly interest rate (Annual Rate / 1200), and n is total months (Tenure * 12).
+
+5. Monthly Cashflow Carry:
+   Monthly Cashflow = Expected Monthly Rent - Monthly Maintenance - Monthly EMI
+
+6. Deal Score Matrix (0 to 100):
+   Deal Score = (0.35 * Financial Health) + (0.20 * Rental Yield) + (0.20 * Price Efficiency) + (0.15 * Loan Burden) + (0.10 * Risk Buffer)
 
 ---
 
-## 🤖 OpenAI Configuration (Optional)
-
-To enable GPT-4o-mini real-time conversational analysis:
-1. Get an API key from [platform.openai.com](https://platform.openai.com).
-2. Add it to `.env`:
-```env
-OPENAI_API_KEY=sk-...
-```
-
----
-
-## 📡 Backend API Reference
+## REST API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/health` | Health check, service status, and active integrations |
-| `POST` | `/api/analyze` | Calculates financial metrics, scores, risks, and projections |
-| `POST` | `/api/ai/chat` | AI conversational Q&A given property context and numbers |
-| `POST` | `/api/compare` | Evaluates and highlights winners among 2+ properties |
-| `GET` | `/api/analyses` | Fetches saved analyses list |
-| `POST` | `/api/analyses` | Saves a property analysis record |
-| `DELETE` | `/api/analyses/:id`| Deletes a saved analysis by ID |
-| `POST` | `/api/report` | Returns formatted metadata for deal PDF reports |
+| GET | /api/health | Service health check and active integration flags |
+| POST | /api/analyze | Computes deterministic metrics, scores, risks, and projections |
+| POST | /api/ai/chat | In-context conversational AI deal consultation |
+| POST | /api/compare | Evaluates and highlights winning metrics among 2 or more properties |
+| GET | /api/analyses | Retrieves stored property analyses |
+| POST | /api/analyses | Saves a property analysis record |
+| DELETE | /api/analyses/:id | Deletes a stored analysis by ID |
+| POST | /api/report | Validates and returns metadata for diligence report exports |
 
 ---
 
-## 🧮 How Calculations Work
+## Building for Production
 
-All quantitative outputs are calculated deterministically:
-
-1. **Price per sq.ft**:  
-   $$\text{Price/sq.ft} = \frac{\text{Asking Price}}{\text{Built-up Area}}$$
-
-2. **Gross Rental Yield**:  
-   $$\text{Gross Yield} = \frac{\text{Monthly Rent} \times 12}{\text{Asking Price}} \times 100$$
-
-3. **Net Rental Yield**:  
-   $$\text{Net Yield} = \frac{(\text{Monthly Rent} - \text{Monthly Maintenance}) \times 12}{\text{Asking Price}} \times 100$$
-
-4. **Monthly EMI** (Standard Amortization Formula):  
-   $$\text{EMI} = P \times r \times \frac{(1+r)^n}{(1+r)^n - 1}$$  
-   Where $P$ is Loan Amount ($\text{Asking Price} - \text{Down Payment}$), $r$ is monthly interest rate ($\frac{\text{Rate}}{12 \times 100}$), and $n$ is total months ($\text{Tenure} \times 12$).
-
-5. **Deal Score Formula (0–100)**:  
-   $$\text{Deal Score} = (0.35 \times \text{Financial}) + (0.20 \times \text{Rental}) + (0.20 \times \text{Price}) + (0.15 \times \text{Loan}) + (0.10 \times \text{Risk})$$
-
----
-
-## 📦 Building for Production
-
-To create an optimized production build:
+To generate an optimized production bundle:
 ```bash
 npm run build
 ```
 
-This compiles TypeScript and generates production-ready static assets in the `dist` directory.
+This compiles TypeScript and builds production static assets in the dist directory.
 
 ---
 
-## ⚖️ Legal Disclaimer
+## Legal and Financial Disclaimer
 
-DealWise AI provides deterministic analytical estimates and qualitative AI interpretations for educational and decision-support purposes only. DealWise AI does not provide certified legal, architectural, appraisal, or financial advisory services. All municipal approvals, RERA certificates, and title deeds should be verified with licensed independent professionals.
+DealWise AI provides deterministic analytical estimates and qualitative interpretations for informational and educational purposes only. DealWise AI does not provide licensed financial, investment, legal, architectural, or tax advice. All municipal approvals, RERA registrations, and title deeds should be independently verified with licensed professionals prior to executing any purchase contract.

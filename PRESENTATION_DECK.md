@@ -1,9 +1,13 @@
 # DealWise AI — Presentation Deck (PPT)
 
 > **Tagline:** Know the deal before you buy.  
-> **Topic:** AI-Powered Real Estate Deal Analyzer & Investment Intelligence Platform  
-> **Presenter:** Panchaksharayya  
-> **Target Audience:** Investors, Developers, Academic Evaluators, Homebuyers  
+> **Topic:** AI-Powered Real Estate Deal Analyzer and Investment Intelligence Platform  
+> **Presenter:** Panchaksharayya | October 2026  
+> **Direct Links:**  
+> - Live Web Application: http://localhost:5173  
+> - PowerPoint Presentation File: [DEALWISE_AI_PRESENTATION.pptx](DEALWISE_AI_PRESENTATION.pptx)  
+> - Word Document Report: [DEALWISE_AI_PROJECT_REPORT.docx](DEALWISE_AI_PROJECT_REPORT.docx)  
+> - GitHub Repository: https://github.com/panchaksharayya12/DealwiseAi  
 
 ---
 
@@ -11,12 +15,12 @@
 
 ### DEALWISE AI
 #### "Know the deal before you buy."
-*AI-Powered Real Estate Deal Analyzer & Valuation Intelligence Platform*
+AI-Powered Real Estate Deal Analyzer and Valuation Intelligence Platform
 
-- **Author:** Panchaksharayya
-- **Repository:** https://github.com/panchaksharayya12/DealwiseAi
-- **Date:** October 2026
-- **Stack:** React • TypeScript • Vite • Tailwind CSS • Express • Node.js • Supabase • OpenAI
+- Author: Panchaksharayya
+- Repository: https://github.com/panchaksharayya12/DealwiseAi
+- Live App: http://localhost:5173
+- Stack: React, TypeScript, Vite, Tailwind CSS, Express, Node.js, Supabase, OpenAI
 
 ---
 
@@ -226,3 +230,4 @@ $$\text{Score} = (0.35 \times \text{Financial}) + (0.20 \times \text{Rental}) + 
 **Live Local Preview:** `http://localhost:5173`  
 
 *Thank you! Questions and discussions are welcome.*
+

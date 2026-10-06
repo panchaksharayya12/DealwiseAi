@@ -1,11 +1,13 @@
 # DealWise AI — Comprehensive Project Report
 
 **Product Name:** DealWise AI  
-**Tagline:** *"Know the deal before you buy."*  
-**Repository:** [https://github.com/panchaksharayya12/DealwiseAi](https://github.com/panchaksharayya12/DealwiseAi)  
+**Tagline:** "Know the deal before you buy."  
+**Repository:** https://github.com/panchaksharayya12/DealwiseAi  
+**Live Application:** http://localhost:5173  
+**Word Document Report:** [DEALWISE_AI_PROJECT_REPORT.docx](DEALWISE_AI_PROJECT_REPORT.docx)  
+**PowerPoint Presentation Deck:** [DEALWISE_AI_PRESENTATION.pptx](DEALWISE_AI_PRESENTATION.pptx)  
 **Author:** Panchaksharayya  
-**Date:** October 2026  
-**Document Version:** 1.0.0 (Production Release)  
+**Date:** October 2026 | Document Version: 1.0.0 (Production Release)  
 
 ---
 
@@ -209,3 +211,4 @@ $$\text{Deal Score} = (0.35 \times S_{\text{financial}}) + (0.20 \times S_{\text
 DealWise AI bridges the critical gap between raw real estate marketing and objective financial clarity. By providing deterministic mathematical modeling, a transparent Deal Score, risk detection, and context-aware AI advisory in a modern visual interface, the platform empowers users to make informed, data-backed buying decisions.
 
 **Project Status:** 100% Complete, Production-Ready, and Fully Functional.
+
