@@ -9,13 +9,14 @@ DealWise AI helps homebuyers, real estate investors, and property syndicates eva
 
 ## Direct Links and Deliverables
 
-- Live Web Application: http://localhost:5173
-- Backend Health Endpoint: http://localhost:5000/api/health
+- Live Deployed Web Application: https://dealwise-ai.vercel.app/
 - GitHub Repository: https://github.com/panchaksharayya12/DealwiseAi
 - Project Report (Word Document): [DEALWISE_AI_PROJECT_REPORT.docx](DEALWISE_AI_PROJECT_REPORT.docx)
 - Presentation Deck (PowerPoint PPT): [DEALWISE_AI_PRESENTATION.pptx](DEALWISE_AI_PRESENTATION.pptx)
 - Technical Report (Markdown): [PROJECT_REPORT.md](PROJECT_REPORT.md)
 - Interactive Presentation (HTML): [presentation.html](presentation.html)
+- Local Development Frontend: http://localhost:5173
+- Local Backend Health Endpoint: http://localhost:5000/api/health
 
 ---
 

@@ -3,7 +3,7 @@
 **Product Name:** DealWise AI  
 **Tagline:** "Know the deal before you buy."  
 **Repository:** https://github.com/panchaksharayya12/DealwiseAi  
-**Live Application:** http://localhost:5173  
+**Live Deployed Application:** https://dealwise-ai.vercel.app/  
 **Word Document Report:** [DEALWISE_AI_PROJECT_REPORT.docx](DEALWISE_AI_PROJECT_REPORT.docx)  
 **PowerPoint Presentation Deck:** [DEALWISE_AI_PRESENTATION.pptx](DEALWISE_AI_PRESENTATION.pptx)  
 **Author:** Panchaksharayya  

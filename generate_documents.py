@@ -52,6 +52,7 @@ def create_word_report():
     # Metadata Block
     meta_p = doc.add_paragraph()
     meta_p.add_run("Author: Panchaksharayya\n").bold = True
+    meta_p.add_run("Live Deployed Application: https://dealwise-ai.vercel.app/\n")
     meta_p.add_run("Repository: https://github.com/panchaksharayya12/DealwiseAi\n")
     meta_p.add_run("Date: October 2026 | Version: 1.0.0 (Production Release)\n")
     meta_p.paragraph_format.space_after = Pt(18)
@@ -383,7 +384,7 @@ def create_powerpoint_presentation():
     p2.space_after = PptxPt(18)
 
     p3 = tf1.add_paragraph()
-    p3.text = "AI-Powered Real Estate Deal Analyzer & Investment Intelligence Platform\nAuthor: Panchaksharayya | October 2026\nRepository: https://github.com/panchaksharayya12/DealwiseAi"
+    p3.text = "AI-Powered Real Estate Deal Analyzer & Investment Intelligence Platform\nLive Web App: https://dealwise-ai.vercel.app/\nAuthor: Panchaksharayya | October 2026\nRepository: https://github.com/panchaksharayya12/DealwiseAi"
     p3.font.size = PptxPt(14)
     p3.font.color.rgb = LIGHT_GRAY
 
@@ -558,7 +559,7 @@ def create_powerpoint_presentation():
         "Mathematical Rigor: Zero AI hallucination on financial calculations; full transparency.",
         "Premium VEX Visuals: Liquid glass styling, cinematic hero video, and zero gradients.",
         "Comprehensive Deliverables: Full-stack codebase, Word Document Report, PowerPoint Deck, and Live App.",
-        "Live Application URL: http://localhost:5173",
+        "Live Deployed Web Application: https://dealwise-ai.vercel.app/",
         "GitHub Repository: https://github.com/panchaksharayya12/DealwiseAi"
     ])
 
@@ -568,3 +569,4 @@ def create_powerpoint_presentation():
 if __name__ == "__main__":
     create_word_report()
     create_powerpoint_presentation()
+
