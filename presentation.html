@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealWise AI — Presentation Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #ffffff;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      height: 85vh;
+      background: rgba(15, 15, 18, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 50px 60px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeIn 0.4s ease-out;
+      overflow-y: auto;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #a1a1aa;
+      font-family: monospace;
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+    }
+    .slide-body {
+      flex: 1;
+      font-size: 17px;
+      color: #d4d4d8;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card h3 {
+      font-size: 19px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .card p, .card li {
+      font-size: 14px;
+      color: #a1a1aa;
+      line-height: 1.6;
+    }
+    ul { list-style: none; }
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    li::before {
+      content: "•";
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: #09090b;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: #ffffff; color: #000000; }
+    .badge {
+      font-family: monospace;
+      font-size: 13px;
+      color: #71717a;
+    }
+    .hero-title {
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 24px;
+      color: #a1a1aa;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    .stat {
+      font-size: 32px;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: monospace;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide-container">
+
+    <!-- Slide 1: Title -->
+    <div class="slide active">
+      <div class="tag">DealWise AI • October 2026 Presentation</div>
+      <div style="margin: auto 0;">
+        <h1 class="hero-title">Know the deal<br>before you buy.</h1>
+        <p class="hero-sub">AI-Powered Real Estate Deal Analyzer & Investment Intelligence Platform</p>
+        <div style="display: flex; gap: 16px; margin-top: 20px;">
+          <span class="card" style="padding: 10px 18px; font-size: 13px; font-family: monospace;">React • TypeScript • Vite</span>
+          <span class="card" style="padding: 10px 18px; font-size: 13px; font-family: monospace;">Node.js • Express</span>
+          <span class="card" style="padding: 10px 18px; font-size: 13px; font-family: monospace;">OpenAI • Supabase</span>
+        </div>
+      </div>
+      <div style="font-size: 13px; color: #71717a; font-family: monospace;">Author: Panchaksharayya | github.com/panchaksharayya12/DealwiseAi</div>
+    </div>
+
+    <!-- Slide 2: Problem -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">01 • Market Need</div>
+          <h2>The Real Estate Buying Problem</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-2">
+        <div class="card">
+          <h3>The Price Illusion</h3>
+          <p>Buyers evaluate properties by location and square footage alone, failing to calculate capitalization yields, maintenance drag, and actual net cashflow.</p>
+        </div>
+        <div class="card">
+          <h3>Negative Carry Shock</h3>
+          <p>High LTV loans paired with interest rates and maintenance fees often cause unanticipated monthly deficits where out-of-pocket costs exceed rental income.</p>
+        </div>
+        <div class="card">
+          <h3>AI Financial Hallucination</h3>
+          <p>Standard LLMs invent financial figures, miscalculate compound amortization, and hallucinate rates, creating dangerous investment guidance.</p>
+        </div>
+        <div class="card">
+          <h3>Broker-Biased Portals</h3>
+          <p>Traditional real-estate listing websites earn broker commissions. Their UX is optimized to sell properties, not to uncover hidden deal risks.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Solution -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">02 • Platform Overview</div>
+          <h2>The DealWise AI Solution</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-3">
+        <div class="card">
+          <div class="stat">100%</div>
+          <h3>Deterministic Math</h3>
+          <p>All financial metrics, EMI figures, and yields are computed by verifiable mathematical algorithms, never invented by AI.</p>
+        </div>
+        <div class="card">
+          <div class="stat">0–100</div>
+          <h3>Weighted Deal Score</h3>
+          <p>A transparent diagnostic matrix evaluating Financial Health (35%), Yield (20%), Price (20%), Debt (15%), and Risk (10%).</p>
+        </div>
+        <div class="card">
+          <div class="stat">Dual AI</div>
+          <h3>Contextual Advisory</h3>
+          <p>AI is deployed strictly for qualitative synthesis, due-diligence checklists, and risk explanations grounded in calculated numbers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Calculations -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">03 • Financial Engine</div>
+          <h2>Actuarial Mathematics & Yields</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-2">
+        <div class="card">
+          <h3>Core Financial Formulas</h3>
+          <ul>
+            <li><strong>Gross Yield:</strong> (Annual Rent / Asking Price) × 100</li>
+            <li><strong>Net Yield:</strong> ((Rent - Maintenance) × 12 / Asking Price) × 100</li>
+            <li><strong>Price / sq.ft:</strong> Asking Price / Built-up Area</li>
+            <li><strong>Cash-on-Cash ROI:</strong> (Net Annual Cashflow / Down Payment) × 100</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Loan Amortization Engine</h3>
+          <ul>
+            <li><strong>Standard Reducing EMI Formula:</strong> P × r × (1+r)^n / ((1+r)^n - 1)</li>
+            <li><strong>Total Interest Computed:</strong> (EMI × n) - Loan Amount</li>
+            <li><strong>LTV Ratio:</strong> (Loan Amount / Asking Price) × 100</li>
+            <li><strong>Monthly Carry:</strong> Rent - Maintenance - Monthly EMI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Deal Score -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">04 • Scoring Methodology</div>
+          <h2>The 5-Pillar Deal Score</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-2">
+        <div class="card">
+          <h3>Transparent Weighted Weights</h3>
+          <ul>
+            <li><strong>Financial Health (35%):</strong> Net yield benchmark, cashflow coverage.</li>
+            <li><strong>Rental Yield Power (20%):</strong> Metropolitan yield comparison.</li>
+            <li><strong>Price Efficiency (20%):</strong> Price per sq.ft affordability.</li>
+            <li><strong>Loan & Debt Burden (15%):</strong> LTV ratio and debt service.</li>
+            <li><strong>Risk Buffer (10%):</strong> Asset age, maintenance drag, parking.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Score Classifications</h3>
+          <ul>
+            <li><strong style="color: #4ade80;">80 – 100: Strong Deal</strong> (Healthy yield, positive carry, low debt risk)</li>
+            <li><strong style="color: #e4e4e7;">60 – 79: Fair Deal</strong> (Viable deal, reasonable yields, minor caveats)</li>
+            <li><strong style="color: #facc15;">40 – 59: Needs Review</strong> (Yield compression, debt burden present)</li>
+            <li><strong style="color: #f87171;">0 – 39: Risky Deal</strong> (Severe negative carry, high leverage danger)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Projections & Comparison -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">05 • Projections & Benchmarking</div>
+          <h2>Scenario Modeling & Comparisons</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-2">
+        <div class="card">
+          <h3>5-Year Growth Projections</h3>
+          <ul>
+            <li>Interactive slider for appreciation assumption (0% to 12%).</li>
+            <li>Recharts SVG rendering of valuation equity vs. rent distributions.</li>
+            <li>Conservative 4% annual rental step-up modeling.</li>
+            <li>Transparent regulatory disclaimers.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Multi-Property Benchmarking</h3>
+          <ul>
+            <li>Side-by-side comparison across 2+ candidate properties.</li>
+            <li>Automated winner highlights (Yield, Price/sqft, Cashflow).</li>
+            <li>DealWise Recommended Deal banner.</li>
+            <li>Pre-loaded presets (Bangalore 2 BHK, Hyderabad 3 BHK, Goa Villa).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Architecture -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">06 • Engineering</div>
+          <h2>System Architecture & Tech Stack</h2>
+        </div>
+      </div>
+      <div class="slide-body grid-3">
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>React 18, TypeScript, Vite, Tailwind CSS, Recharts, Lucide Icons, jsPDF vector report engine.</p>
+        </div>
+        <div class="card">
+          <h3>Backend REST API</h3>
+          <p>Node.js & Express with tsx, verified actuarial math, request validation, universal 0.0.0.0 host binding.</p>
+        </div>
+        <div class="card">
+          <h3>Persistence & AI</h3>
+          <p>OpenAI GPT-4o-mini with deterministic fallback engine. Supabase cloud database with localStorage sync.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Conclusion -->
+    <div class="slide">
+      <div class="slide-header">
+        <div>
+          <div class="tag">07 • Conclusion</div>
+          <h2>Summary & Deliverables</h2>
+        </div>
+      </div>
+      <div class="slide-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <h3 style="font-size: 32px; font-weight: 500; margin-bottom: 16px;">Production-Ready Deal Analysis</h3>
+        <p style="max-width: 650px; font-size: 16px; color: #a1a1aa; margin-bottom: 30px;">
+          DealWise AI brings actuarial precision, objective weighted scoring, and contextual AI intelligence into one seamless fintech platform.
+        </p>
+        <div style="font-family: monospace; font-size: 14px; background: rgba(255,255,255,0.08); padding: 12px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);">
+          Repository: github.com/panchaksharayya12/DealwiseAi
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="prevBtn" onclick="prevSlide()">← Previous</button>
+    <div class="badge" id="slideIndicator">Slide 1 / 8</div>
+    <button class="btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicator = document.getElementById('slideIndicator');
+
+    function showSlide(index) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+      indicator.textContent = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
